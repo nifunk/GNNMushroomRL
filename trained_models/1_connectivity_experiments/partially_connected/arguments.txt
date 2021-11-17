@@ -1,0 +1,5 @@
+Evaluation command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --use-mcts 0 --test-samples 1000 --num-blocks 30 --env-grid 5 --graph-fconnected 0 --load-path PATH_TO_REPO/mushroom-rl/trained_models/1_connectivity_experiments/partially_connected/agent.msh --env 1-wo-robo
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --use-mcts 0 --num-blocks 30 --env-grid 5 --graph-fconnected 0 --env 1-wo-robo --save --name PC_architecture --evaluation-frequency 100 --test-samples 10 --num-workers 1

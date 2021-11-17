@@ -1,0 +1,5 @@
+Evaluation command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --test-samples 1000 --num-blocks 20 --load-path PATH_TO_REPO/mushroom-rl/trained_models/3_robo_2_sides/agent.msh --env 2-w-robo
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --num-blocks 20 --env 2-w-robo --save --name 2_sided_robo --evaluation-frequency 100 --test-samples 10 --num-workers 1 --max-replay-size 30000 --final-exploration-frame 100000

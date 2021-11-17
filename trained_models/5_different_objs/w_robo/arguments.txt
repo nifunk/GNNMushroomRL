@@ -1,0 +1,8 @@
+Evaluation command:
+w MCTS:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 1 --test-samples 1000 --num-blocks 30 --env-grid 5 --mcts-type q_mcts --expansion-policy e_greedy --search-budget-iter 10 --load-path PATH_TO_REPO/mushroom-rl/trained_models/5_different_objs/w_robo/agent.msh --env 2-w-robo-more-obj
+wo MCTS:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --test-samples 1000 --num-blocks 30 --env-grid 5 --load-path PATH_TO_REPO/mushroom-rl/trained_models/5_different_objs/w_robo/agent.msh --env 2-w-robo-more-obj
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --num-blocks 30 --env-grid 5 --env 2-w-robo-more-obj --save --name diff_obj_w_robo --evaluation-frequency 100 --test-samples 10 --num-workers 1 --max-replay-size 30000 --final-exploration-frame 200000

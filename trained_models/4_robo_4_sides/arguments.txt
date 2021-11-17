@@ -1,0 +1,8 @@
+Evalution commmand:
+wo MCTS:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --test-samples 1000 --num-blocks 30 --load-path PATH_TO_REPO/mushroom-rl/trained_models/4_robo_4_sides/agent.msh --env 4-w-robo
+w MCTS:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 1 --test-samples 1000 --num-blocks 30 --mcts-type q_mcts --expansion-policy e_greedy --search-budget-iter 10 --load-path PATH_TO_REPO/mushroom-rl/trained_models/4_robo_4_sides/agent.msh --env 4-w-robo
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 0 --num-blocks 30 --env 4-w-robo --save --name 4_sided_robo --evaluation-frequency 100 --test-samples 10 --num-workers 1 --max-replay-size 30000 --final-exploration-frame 100000

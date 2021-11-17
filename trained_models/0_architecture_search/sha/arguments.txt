@@ -1,0 +1,5 @@
+Evaluation command:
+python boxes_3D_dqn__fill_multidim.py --model sha_full --use-cuda --use-mcts 0 --test-samples 1000 --num-blocks 30 --load-path PATH_TO_REPO/mushroom-rl/trained_models/0_architecture_search/sha/agent.msh --env 2-wo-robo
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model sha_full --use-cuda --use-mcts 0 --num-blocks 30 --env 2-wo-robo --save --name SHA_architecture --evaluation-frequency 100 --test-samples 10 --num-workers 1

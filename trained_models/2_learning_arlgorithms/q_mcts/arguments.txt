@@ -1,0 +1,5 @@
+Evaluation command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 1 --test-samples 1000 --num-blocks 30 --mcts-type q_mcts --expansion-policy e_greedy --search-budget-iter 10 --load-path PATH_TO_REPO/mushroom-rl/trained_models/2_learning_arlgorithms/q_mcts/agent.msh --env 2-wo-robo
+
+Training command:
+python boxes_3D_dqn__fill_multidim.py --model mha_full --use-cuda --graph-fconnected 0 --use-mcts 1 --num-blocks 30 --mcts-type q_mcts --expansion-policy e_greedy --search-budget-iter 5 --env 2-wo-robo --save --name qMCTS_learn --evaluation-frequency 100 --test-samples 10 --num-workers 1 --max-replay-size 30000 --final-exploration-frame 100000
