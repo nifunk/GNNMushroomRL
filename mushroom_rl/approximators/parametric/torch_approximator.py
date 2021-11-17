@@ -93,6 +93,7 @@ class TorchApproximator(Serializable):
             The predictions of the model.
 
         """
+        self._use_cuda = False
         if not self._use_cuda:
             torch_args = [torch.from_numpy(x).float() if isinstance(x, np.ndarray) else x
                           for x in args]

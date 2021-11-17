@@ -49,6 +49,11 @@ In the folder named trained_models, we provide the trained models which were the
 as well as the exemplary training commands how to obtain them.
 Please see the README inside this folder for further instructions.
 
+**Note: this branch is specifically aimed to load our pretrained models (which have been trained using cuda) on non-cuda
+machines. This has been achieved by adapting the loading procedure.**
+
+**We recommend to only use this branch for the aforementioned purpose. If you want to use our code as the basis to 
+develop something new / train models from scratch, please do use the main branch**.
 
 # Credits
 
